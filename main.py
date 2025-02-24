@@ -53,7 +53,7 @@ def post_reel():
         print(f"Error to post reel: {e}")
 
 # Schedule the post every days at 5pm
-schedule.every().day.at("13:07").do(post_reel)
+schedule.every().day.at("17:00").do(post_reel)
 
 print("Initialize bot! Wait the time to post...")
 
