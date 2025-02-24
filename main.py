@@ -23,7 +23,14 @@ def save_counter(counter):
 # Auth in Instagram
 def login():
     cl = Client()
-    cl.login(USERNAME, PASSWORD)
+    session_file = "session.json"
+
+    if os.path.exists(session_file):
+        cl.load_settings(session_file)
+    else:
+        cl.login(USERNAME, PASSWORD)
+        cl.dump_settings(session_file)
+
     return cl
 
 # Function to post a Reel
