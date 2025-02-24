@@ -52,8 +52,8 @@ def post_reel():
     except Exception as e:
         print(f"Error to post reel: {e}")
 
-# Schedule the post every days at 12pm
-schedule.every().day.at("12:00").do(post_reel)
+# Schedule the post every days at 5pm
+schedule.every().day.at("17:00").do(post_reel)
 
 print("Initialize bot! Wait the time to post...")
 
