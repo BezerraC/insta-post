@@ -13,7 +13,7 @@ def get_counter():
         with open("counter.txt", "r") as f:
             counter = int(f.read())
     except FileNotFoundError:
-        counter = 9
+        counter = 10
     return counter
 
 def save_counter(counter):
