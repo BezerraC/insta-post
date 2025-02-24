@@ -26,4 +26,7 @@ jobs:
           pip install -r requirements.txt  # Assumindo que você tem um arquivo requirements.txt
       
       - name: Rodar script Python
+        env:
+          IG_USERNAME: ${{ secrets.IG_USERNAME }}
+          IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
         run: python main.py  
