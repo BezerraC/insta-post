@@ -1,6 +1,4 @@
 import os
-import schedule
-import time
 from instagrapi import Client
 from dotenv import load_dotenv
 
@@ -52,12 +50,5 @@ def post_reel():
     except Exception as e:
         print(f"Error to post reel: {e}")
 
-# Schedule the post every days at 5pm
-schedule.every().day.at("17:00").do(post_reel)
-
-print("Initialize bot! Wait the time to post...")
-
-# Keep script runing
-while True:
-    schedule.run_pending()
-    time.sleep(10)
+# Using cron in workflow
+post_reel()
