@@ -14,7 +14,6 @@ A Python bot to automatically post reels on Instagram, using the [Instagrapi](ht
 ```
 ├── main.py               # Main script to post reels
 ├── session.json          # Stores Instagram session data
-├── counter.txt           # Keeps track of the daily counter
 ├── reel.mp4              # Video file to be posted
 ├── reel.mp4.jpg          # Thumbnail image for the reel
 ├── requirements.txt      # List of dependencies
